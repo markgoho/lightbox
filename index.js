@@ -90,9 +90,6 @@ const galleryView = {
   init() {
     // store pointers to DOM elements for later access
     this.gallery = document.querySelector('.gallery');
-    this.render();
-  },
-  render() {
     controller.images.forEach(image => {
       const a = document.createElement('a');
       a.href = image.imgPath;
@@ -109,7 +106,8 @@ const galleryView = {
 
       this.gallery.appendChild(a);
     });
-  }
+  },
+  render() {}
 };
 
 const lightboxView = {
